@@ -8,8 +8,8 @@ Date: [251021]
 import socket
 import sys
 
-
 if __name__ == "__main__":
+    start_server()
     pass
 
 #### Kabelkramarnas branch
