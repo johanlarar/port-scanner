@@ -2,7 +2,7 @@
 """
 Network Scanner Project
 Students: [Kaj, Mattias E, Niclas, Mattias L och Ludvig]
-Date: [Date]
+Date: [251021]
 """
 
 import socket
