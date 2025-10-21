@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Network Scanner Project
-Students: [Your names here]
+Students: [Kaj, Mattias E, Niclas, Mattias L och Ludvig]
 Date: [Date]
 """
 
@@ -12,4 +12,4 @@ import sys
 if __name__ == "__main__":
     pass
 
-#### Kajs fork
+#### Kabelkramarnas branch
