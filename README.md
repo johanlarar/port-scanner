@@ -1,9 +1,11 @@
 # Network Scanner
 
 ## Group Members
-- [Name 1]
-- [Name 2]
-- [Name 3]
+- Björn
+- Daniel
+- Mattias.K
+- Lukas.S
+- Vien
 
 ## Description
 [Brief description of what your network scanner does]
@@ -34,3 +36,4 @@ python network_scanner.py
 
 ## What We Learned
 [Key takeaways from the project]
+
