@@ -41,7 +41,7 @@ try:
                 f.write(f"Port {port}: ClOSED\n")
                 s.close()
                 
-    print(f"\nSkanning slutförd.\n{open_ports} öppna portar.\nResultat sparat i result.txt\n\n")
+    print(f"Skanning slutförd.\n\n{open_ports} öppna portar.\nResultat sparat i result.txt\n")
     with open("result.txt", "a", encoding="utf-8") as f:
         f.write(f"\nOpen ports: {open_ports}")
 
