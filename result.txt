@@ -1,10 +1,11 @@
 Target: scanme.nmap.org 
-Range: 79 - 81
+Range: 80 - 90
 Timeout: 1s
 
 Result:
-Port 79: ClOSED
 Port 80: OPEN
 Port 81: ClOSED
-
-Open ports: 1
+Port 82: ClOSED
+Port 83: ClOSED
+Port 84: ClOSED
+Port 85: ClOSED
