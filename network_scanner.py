@@ -30,12 +30,20 @@ try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Skapar en ny socket, AF_INET och SOCK_STREAM är default
         result = s.connect_ex((target,port)) # Ansluter. Får tillbaks 0 ifall anslutning lyckades.
 
-        if result == 0: 
+        if result == 0 and port != 80: 
             open_ports += 1
-            print(f"Port {port}/{range_end}: ÖPPEN, {socket.getservbyport(port)}")
+            request = s.recv(1024)
+            print(f"Port {port}/{range_end}: ÖPPEN - {request}")
             s.close()
             with open("result.txt", "a", encoding="utf-8") as f:
-                f.write(f"Port {port}: OPEN, Protocol Service Name: {socket.getservbyport(port)}\n")
+                f.write(f"Port {port}: OPEN, Protocol Service Name: {request}\n")
+            f.close()
+
+        elif result == 0 and port == 80:
+            open_ports += 1
+            print(f"Port {port}/{range_end}: ÖPPEN - HTTP")
+            with open("result.txt", "a", encoding="utf-8") as f:
+                f.write(f"Port {port}: OPEN, Protocol Service Name: HTTP\n")
             f.close()
 
         else:
