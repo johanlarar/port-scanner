@@ -20,7 +20,7 @@ socket.setdefaulttimeout(timeout) #sätte en timeout för varje port
 with open("result.txt", "a", encoding="utf-8") as f:
     f.seek(0) ## Flyttar file pointern till början av filen
     f.truncate() ## Tar bort allt som ligger efter file pointerns position
-    f.write(f"Target: {target} \nRange: {range_start} - {range_end}\nTimeout: {timeout}s\n\nResult:\n")
+    f.write(f"Mål: {target}\nIntervall: {range_start} - {range_end}\nTimeout: {timeout}s\n\nResultat:\n")
 f.close()
 
 print(f"\nPortScanner\nMål: {target}\nIntervall: {range_start}-{range_end}\nTimeout: {timeout}s\n")
@@ -36,14 +36,14 @@ try:
             print(f"Port {port}/{range_end}: ÖPPEN - {request}") #talar om ifall porten är öppen och ger en banner för den
             s.close()#stänger socketen
             with open("result.txt", "a", encoding="utf-8") as f: #öppnar result.txt med rätt inställningar
-                f.write(f"Port {port}: OPEN, Protocol Service Name: {request}\n") #skriver i result.txt
+                f.write(f"Port {port}: ÖPPEN, Protkoll Service Namn: {request}\n") #skriver i result.txt
             f.close()
 
         elif result == 0 and port == 80: #ifall porten är 80
             open_ports += 1 #räknar öppna portar
             print(f"Port {port}/{range_end}: ÖPPEN - HTTP") #talar om att port 80 använder HTTP
             with open("result.txt", "a", encoding="utf-8") as f: #skriver resultatet i result.txt
-                f.write(f"Port {port}: OPEN, Protocol Service Name: HTTP\n")
+                f.write(f"Port {port}: ÖPPEN, Protokoll Service Namn: HTTP\n")
             f.close()
         
 
@@ -51,13 +51,13 @@ try:
             print(f"Port {port}/{range_end}: STÄNGD") #talar om att porten är stängd
             s.close()
             with open("result.txt", "a", encoding="utf=8") as f:
-                f.write(f"Port {port}: ClOSED\n")
+                f.write(f"Port {port}: STÄNGD\n")
             f.close()
                 
                 
     print(f"\nSkanning slutförd.\n\n{open_ports} öppna portar.\nResultat sparat i result.txt\n") #talar om hur många öppna portar som fanns
     with open("result.txt", "a", encoding="utf-8") as f:
-        f.write(f"\nOpen ports: {open_ports}")
+        f.write(f"\nÖppna Portar: {open_ports}")
     f.close()
 
 
