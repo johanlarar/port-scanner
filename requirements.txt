@@ -1,2 +1,2 @@
-# Optional dependencies for the network scanner project
-colorama>=0.4.6
+colorama==0.4.6
+tqdm==4.67.1

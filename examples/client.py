@@ -3,7 +3,7 @@ import socket
 import sys
 
 
-def start_client(host="0.0.0.0", port=8080):
+def start_client(host="45.33.32.156", port=80):
     # Create a TCP/IP socket
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -15,7 +15,9 @@ def start_client(host="0.0.0.0", port=8080):
 
         # Setting up the "ping" message
         message = "ping"
-        print(f"Seding: {message}")
+
+        print(f"Sending: {message}")
+
         # Sending "ping" message to server
         client_socket.sendall(message.encode("utf-8"))
 
