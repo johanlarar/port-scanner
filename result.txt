@@ -1,0 +1,18 @@
+Target: scanme.nmap.org 
+Range: 80 - 90
+Timeout: 1s
+
+Result:
+Port 80: OPEN, Protocol Service Name: http
+Port 81: ClOSED
+Port 82: ClOSED
+Port 83: ClOSED
+Port 84: ClOSED
+Port 85: ClOSED
+Port 86: ClOSED
+Port 87: ClOSED
+Port 88: ClOSED
+Port 89: ClOSED
+Port 90: ClOSED
+
+Open ports: 1
